@@ -1,3 +1,6 @@
+@import url('./node_modules/bootstrap/dist/css/bootstrap.min.css');
+@import url('./node_modules/bootstrap-icons/font/bootstrap-icons.min.css');
+
 :root {
   --pokedex-red: #dc0a2d;
   --device-red: #c00d0d;
@@ -10,4 +13,67 @@
   --text: #f5f5f5;
   --number-text: #6cc2ed;
   --font-mono: "Space Mono", "JetBrains Mono", monospace;
+}
+
+* {
+  letter-spacing: 0.04em;
+  scrollbar-width: none;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background-color: var(--screen-dark);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+#loading-page {
+  position: fixed;
+  inset: 0; /* lo mismo que top: 0; left: 0; bottom: 0; right: 0; */
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--panel-red);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading-page.d-none {
+  display: none;
+}
+
+#loading-page div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading-page h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+#loading-page p {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.btn:active {
+  transform: scale(0.9);
+  transition: 0.1s;
+}
+
+.btn:focus {
+  transition: 0.1s;
+}
+
+.primary-bg {
+  background-color: var(--pokedex-red);
+}
+
+.main-bg {
+  background-color: var(--screen-dark);
 }

@@ -1,0 +1,24 @@
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes lightenEffect {
+  0% {
+    color: var(--green);
+  }
+  50% {
+    color: #8fbd94;
+  }
+  100% {
+    color: #cfe2ff;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
